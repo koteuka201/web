@@ -1,0 +1,178 @@
+body {
+    height: 95vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(cluster-back.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+        "head head"
+        "side main"
+        "side main";
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 10% 90%;
+
+    font-weight: 700;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 99.5%;
+    height: 35%;
+    text-align: center;
+    background-color: rgb(109, 112, 124);
+}
+.headerBar{
+    width: 100%;
+}
+.A-star{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    width: 30%;
+    font-size: 15px;
+    margin-top: 1%;
+    border-radius: 4px;
+}
+
+.A-star::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(17, 238, 17);
+    transition: width 0.5s ease-out;
+}
+  
+.A-star.clicked::before {
+    width: 100%;
+    right: 0;
+}
+.A-star span {
+    position: relative;
+    z-index: 1;
+}
+.A-star::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(17, 238, 17);
+    transition: all 0.5s ease-out;
+    z-index: -2;
+    opacity: 0;
+}
+.A-star.clicked::after {
+    opacity: 1;
+}
+
+.Ant-alg{
+    width: 30%;
+    height: 1%;
+    font-size: 15px;
+    margin-top: 1%;
+    border-radius: 4px;
+}
+.Genetic-alg{
+    width: 30%;
+    height: 1%;
+    font-size: 15px;
+    margin-top: 1%;
+    border-radius: 4px;
+}
+aside {
+    grid-area: side;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: darkgray;
+    font-size: 20px;
+}
+aside *{
+    margin-top: 10px;
+    margin-left: 25px;
+    font-size: 20px;
+}
+main {
+    height: 100%;
+    width: 100%;
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainPlace {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    font-size: 20px;
+    height:100%;
+    width: 83%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.clusterCounter{
+    border-radius: 10px;
+    padding: 1%;
+    font-size: 20px;
+    width: 43%;
+    height: 3.5%;
+    text-align: center;
+}
+.canvasContainer{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.myCanvas{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: darkgray;
+
+}
+
+.findClusters{
+    font-weight: 700;
+    font-size: 16px;
+    width: 45%;
+    height: 5%;
+    border-radius: 10px;
+}
+.clearMap{
+    font-weight: 700;
+    font-size: 16px;
+    width: 45%;
+    height: 5%;
+    border-radius: 10px;
+}
+

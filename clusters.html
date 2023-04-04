@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clusters.css">
+    <title>Algorithm</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="headerBar">
+                <button class="A-star"><span>A-star</span></button>
+                <button class="Ant-alg">Ant-alg</button>
+                <button class="Genetic-alg">Genetic-alg</button>
+            </div>
+        </header>
+        <aside>
+            <div class="menu">
+                <div>Количество кластеров</div>
+                <input class="clusterCounter" type="number" name="tableSize" placeholder="Введите кол-во" min="1"max="9">
+                <br>
+                <button class="findClusters">Найти Кластеры</button>
+                <button class="clearMap">Очистить поле</button>
+            </div>
+        </aside>
+        <main>
+            <div class="canvasContainer">
+                <canvas class="myCanvas" height="800px" width="800px"></canvas>
+            </div>
+        </main>
+    </div>
+    <script src="clusters.js"></script>
+</body>
+
+</html>
